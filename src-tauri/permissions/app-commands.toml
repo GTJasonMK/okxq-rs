@@ -1,0 +1,21 @@
+[[permission]]
+identifier = "allow-app-commands"
+description = "Allows the main window to call OKXQ application commands."
+commands.allow = [
+  "get_app_info",
+  "system_health",
+  "system_status",
+  "local_api_request",
+  "get_okx_config",
+  "save_okx_config",
+  "test_okx_connection",
+  "get_assistant_config",
+  "save_assistant_config",
+  "get_preferences",
+  "get_preference",
+  "save_preferences",
+  "update_preferences",
+  "delete_preference",
+  "get_watched_symbols",
+  "add_watched_symbol",
+]

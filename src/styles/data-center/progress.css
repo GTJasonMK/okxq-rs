@@ -1,0 +1,146 @@
+.dc-jobs {
+  margin-top: 10px;
+}
+
+.dc-job-progress {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.dc-job-progress.failed {
+  border-color: rgba(239, 83, 80, 0.28);
+  background: rgba(239, 83, 80, 0.06);
+}
+
+.dc-job-progress-head,
+.dc-job-progress-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dc-job-progress-head {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dc-job-progress-head strong {
+  color: var(--color-text-primary);
+  font-size: 12px;
+}
+
+.dc-job-progress-track {
+  height: 6px;
+  margin: 7px 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dc-job-progress-fill {
+  display: block;
+  height: 100%;
+  min-width: 0;
+  border-radius: inherit;
+  background: var(--color-accent);
+  transition: width 180ms ease;
+}
+
+.dc-job-progress-track.segmented {
+  display: flex;
+  gap: 2px;
+  background: transparent;
+}
+
+.dc-job-progress-segment {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-width: 18px;
+  overflow: hidden;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dc-job-progress-segment i {
+  display: block;
+  width: var(--segment-progress);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-accent);
+  transition: width 180ms ease;
+}
+
+.dc-job-progress-segment.save i {
+  background: #17a2b8;
+}
+
+.dc-job-progress-segment.derive i {
+  background: #22a06b;
+}
+
+.dc-job-progress-segment.active {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.dc-job-progress-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin: -1px 0 6px;
+  color: var(--color-text-tertiary);
+  font-size: 11px;
+}
+
+.dc-job-progress-stages span.active {
+  color: var(--color-text-secondary);
+}
+
+.dc-job-progress.failed .dc-job-progress-fill,
+.dc-job-progress.failed .dc-job-progress-segment i {
+  background: var(--color-negative);
+}
+
+.dc-job-progress-meta {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}
+
+.dc-job-progress-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: -1px 0 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.dc-job-progress-main strong {
+  color: var(--color-text-primary);
+  font-size: 13px;
+}
+
+.dc-job-phase {
+  min-width: 52px;
+  color: var(--color-text-tertiary);
+}
+
+.dc-job-cancel {
+  border: 0;
+  background: transparent;
+  color: var(--color-negative);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dc-muted {
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+}

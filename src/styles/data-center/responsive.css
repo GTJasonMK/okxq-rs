@@ -1,0 +1,56 @@
+@media (max-width: 980px) {
+  .dc-command-bar,
+  .dc-command-left,
+  .dc-panel-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dc-tabs {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .dc-hint {
+    display: none;
+  }
+
+  .dc-markets,
+  .dc-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dc-timeframe-row {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .dc-timeframe-main,
+  .dc-timeframe-meta {
+    justify-content: flex-start;
+  }
+
+  .dc-timeframe-row .dc-btn {
+    width: 100%;
+  }
+
+  .dc-plan-item {
+    width: 100%;
+  }
+
+  .dc-plan-item .dc-chip {
+    flex: 1;
+  }
+
+  .dc-kpi-grid,
+  .dc-storage-totals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dc-kpi-grid,
+  .dc-storage-totals {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,257 @@
+.okx-config {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.okx-config .oc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.okx-config .oc-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.okx-config .oc-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.okx-config .oc-current {
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.4;
+  border: 1px solid rgba(38, 166, 154, 0.35);
+  background: rgba(38, 166, 154, 0.08);
+  color: var(--color-positive);
+}
+
+.okx-config .oc-current.live {
+  border-color: rgba(239, 83, 80, 0.38);
+  background: rgba(239, 83, 80, 0.08);
+  color: var(--color-negative);
+}
+
+.okx-config .oc-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.okx-config .save-btn,
+.okx-config .test-btn {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.okx-config .save-btn {
+  flex: 0 0 auto;
+  background: var(--color-accent);
+  border: none;
+  color: #fff;
+}
+
+.okx-config .test-btn {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.okx-config .save-btn:disabled,
+.okx-config .test-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.okx-config .oc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+
+.okx-config .oc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.okx-config .oc-section + .oc-section {
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.okx-config .oc-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.okx-config .oc-section-head h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.okx-config .oc-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.okx-config .mode-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.okx-config .mode-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 10px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.okx-config .mode-option.active {
+  border-color: rgba(38, 166, 154, 0.5);
+  background: rgba(38, 166, 154, 0.08);
+}
+
+.okx-config .mode-option.live.active {
+  border-color: rgba(239, 83, 80, 0.45);
+  background: rgba(239, 83, 80, 0.08);
+}
+
+.okx-config .mode-option input {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-accent);
+}
+
+.okx-config .mode-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.okx-config .mode-meta {
+  margin-left: auto;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.okx-config .mode-meta.ok {
+  color: var(--color-positive);
+}
+
+.okx-config .mode-meta.missing {
+  color: var(--color-text-tertiary);
+}
+
+.okx-config .oc-fields {
+  display: grid;
+  gap: 10px;
+}
+
+.okx-config .oc-field {
+  min-width: 0;
+}
+
+.okx-config .oc-field-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.okx-config .oc-field label {
+  display: block;
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+
+.okx-config .oc-mask {
+  min-width: 0;
+  max-width: 70%;
+  overflow: hidden;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.okx-config .oc-input {
+  width: 100%;
+  padding: 5px 8px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-primary);
+  font-size: 12px;
+}
+
+.okx-config .active-chip,
+.okx-config .status-badge {
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.okx-config .active-chip {
+  border: 1px solid rgba(38, 166, 154, 0.35);
+  background: rgba(38, 166, 154, 0.08);
+  color: var(--color-positive);
+}
+
+.okx-config .active-chip.live {
+  border-color: rgba(239, 83, 80, 0.38);
+  background: rgba(239, 83, 80, 0.08);
+  color: var(--color-negative);
+}
+
+.okx-config .status-badge.ok {
+  border: 1px solid rgba(38, 166, 154, 0.35);
+  background: rgba(38, 166, 154, 0.08);
+  color: var(--color-positive);
+}
+
+.okx-config .status-badge.missing {
+  border: 1px solid var(--color-border);
+  color: var(--color-text-tertiary);
+}
+
+@media (max-width: 720px) {
+  .okx-config .mode-options {
+    grid-template-columns: 1fr;
+  }
+}
