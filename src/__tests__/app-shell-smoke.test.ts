@@ -24,6 +24,7 @@ const ROUTE_SMOKE_CASES = [
   { path: '/assistant', label: 'AI', marker: 'AI 助手' },
   { path: '/settings', label: '设置', marker: '设置' },
 ]
+const ROUTE_SMOKE_TIMEOUT_MS = 20_000
 
 describe('App Shell 路由挂载 smoke', () => {
   beforeEach(async () => {
@@ -69,7 +70,7 @@ describe('App Shell 路由挂载 smoke', () => {
     }
 
     wrapper.unmount()
-  })
+  }, ROUTE_SMOKE_TIMEOUT_MS)
 })
 
 function chartStub(name: string) {

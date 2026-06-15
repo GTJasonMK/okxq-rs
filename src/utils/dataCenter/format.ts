@@ -7,11 +7,20 @@ export function formatList(value?: string[] | null) {
   return value.filter(Boolean).join(' / ') || '--'
 }
 
+const dateTimeFormatter = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+})
+
 export function formatTime(value?: string) {
   if (!value) return '--'
   const parsed = new Date(value)
   if (Number.isNaN(parsed.getTime())) return '--'
-  return parsed.toLocaleString('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+  return dateTimeFormatter.format(parsed)
 }
 
 export function formatDateTimeValue(value?: string | number | null) {
@@ -21,12 +30,7 @@ export function formatDateTimeValue(value?: string | number | null) {
     : value
   const parsed = new Date(timestamp)
   if (Number.isNaN(parsed.getTime()) || parsed.getTime() <= 0) return '--'
-  return parsed.toLocaleString('zh-CN', {
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-  })
+  return dateTimeFormatter.format(parsed)
 }
 
 export function formatOptionalDateTime(value?: string | number | null) {
